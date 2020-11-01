@@ -1,0 +1,37 @@
+button {
+    height: 5rem;
+    width: 10rem;
+}
+
+.imagen {
+    background-image:  url("/board-photo.jpg");
+    
+}
+
+
+.card{
+    width: 18rem
+}
+
+.card-img-top{
+    min-height: 123.92px;
+    max-height: 123.92px;
+}
+
+#principalButton{
+    background-color: rgba(241, 233, 233, 0.726);
+    border: 1px transparent;
+}
+
+.addbut{
+    height: 5rem;
+    width: 5rem;
+    color: white;
+}
+
+.centerbutton{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 10rem;
+}

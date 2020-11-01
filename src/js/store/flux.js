@@ -1,42 +1,31 @@
 const getState = ({ getStore, getActions, setStore }) => {
 	return {
 		store: {
-			demo: [
-				{
-					title: "FIRST",
-					background: "white",
-					initial: "white"
-				},
-				{
-					title: "SECOND",
-					background: "white",
-					initial: "white"
-				}
-			]
+			coord: { lat: 40.416729, long: -3.703339 }
 		},
 		actions: {
-			// Use getActions to call a function within a fuction
-			exampleFunction: () => {
-				getActions().changeColor(0, "green");
-			},
 			loadSomeData: () => {
 				/**
 					fetch().then().then(data => setStore({ "foo": data.bar }))
 				*/
 			},
-			changeColor: (index, color) => {
-				//get the store
-				const store = getStore();
 
-				//we have to loop the entire demo array to look for the respective index
-				//and change its color
-				const demo = store.demo.map((elm, i) => {
-					if (i === index) elm.background = color;
-					return elm;
-				});
-
-				//reset the global store
-				setStore({ demo: demo });
+			loadCoord: coord => {
+				return setStore({ coord: coord });
+			},
+			setCoord: () => {
+				navigator.geolocation.getCurrentPosition(
+					function(position) {
+						let latitude = position.coords.latitude;
+						let longitude = position.coords.longitude;
+						let coord = { lat: latitude, long: longitude };
+						setStore({ coord: coord });
+					},
+					function(error) {
+						console.log(error);
+					},
+					{ enableHighAccuracy: true }
+				);
 			}
 		}
 	};
