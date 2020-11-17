@@ -2,6 +2,7 @@ import React from "react";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 
 import { Home } from "./views/home";
+import { Imagen } from "./views/imagen";
 import { Single } from "./views/single";
 import injectContext from "./store/appContext";
 
@@ -24,6 +25,9 @@ const Layout = () => {
 					</Route>
 					<Route exact path="/single/:theid">
 						<Single />
+					</Route>
+					<Route exact path="/imagen">
+						<Imagen />
 					</Route>
 					<Route>
 						<h1>Not found!</h1>

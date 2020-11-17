@@ -6,6 +6,7 @@ import MapView from "../component/react-map";
 import { Map } from "leaflet";
 import { Blog } from "../component/blog";
 import { AddButton } from "../component/addButton";
+import { Form } from "../component/form";
 
 export const Home = () => {
 	return (
