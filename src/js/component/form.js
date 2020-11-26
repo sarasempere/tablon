@@ -12,6 +12,8 @@ export const Form = () => {
 				method="POST"
 				encType="multipart/form-data">
 				<input type="file" name="archivo" />
+				<input type="hidden" name="lat" value={store.coord.lat} />
+				<input type="hidden" name="long" value={store.coord.long} />
 				<input type="submit" />
 			</form>
 		</div>
