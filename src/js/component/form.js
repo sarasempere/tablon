@@ -8,7 +8,7 @@ export const Form = () => {
 	return (
 		<div>
 			<form
-				action="https://3000-c8306a40-2582-4f1e-b4dd-8199ff44f6ce.ws-eu01.gitpod.io/userphoto"
+				action="https://3000-d1e0b60d-866e-4306-b25d-f7037163ff1c.ws-eu03.gitpod.io/userphoto"
 				method="POST"
 				encType="multipart/form-data">
 				<input type="file" name="archivo" />

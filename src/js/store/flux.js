@@ -13,7 +13,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 			//Este action no se usa. Directamente subimos imagen desde componente Form.
 			upload: async file => {
 				console.log(file, "esto es la imagen");
-				const url = "https://3000-c8306a40-2582-4f1e-b4dd-8199ff44f6ce.ws-eu01.gitpod.io/userphoto";
+				const url = "https://3000-d1e0b60d-866e-4306-b25d-f7037163ff1c.ws-eu03.gitpod.io/userphoto";
 				var myHeaders = new Headers();
 				myHeaders.append("Content-Type", "application/json");
 				var requestOptions = {
@@ -36,7 +36,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 			},
 
 			photos: async () => {
-				const url = "https://3000-c8306a40-2582-4f1e-b4dd-8199ff44f6ce.ws-eu01.gitpod.io/imagen";
+				const url = "https://3000-d1e0b60d-866e-4306-b25d-f7037163ff1c.ws-eu03.gitpod.io/imagen";
 				let response = await fetch(url);
 				let respJson = await response.json();
 				let photos = respJson.data;
